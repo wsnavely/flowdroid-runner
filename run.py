@@ -26,7 +26,7 @@ if __name__ == "__main__":
     mkdir_p(flowdroid_dir)
 
     for apk in os.listdir(apkdir):
-        if not apk.endswith("*.apk"):
+        if not apk.endswith(".apk"):
             continue
         apk_path = os.path.join(apkdir, apk)
         apk_name = os.path.basename(apk_path)
