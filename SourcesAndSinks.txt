@@ -1,0 +1,2 @@
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> android.permission.READ_PHONE_STATE -> _SOURCE_
+<android.app.Activity: void startActivityForResult(android.content.Intent,int)> -> _SINK_
