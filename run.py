@@ -36,7 +36,7 @@ if __name__ == "__main__":
         logging.info("Processing APK: " + apk_path)
         args = sys.argv[1:]
         args += ["-jar", os.path.join(reporoot, "didfail_phase1.jar")]
-        args += ["-apk", apkpath]
+        args += ["-apk", apk_path]
         args += ["-platforms", platforms]
         args += ["-out", fd_out]
         args += ["-config", os.path.join(reporoot, "didfail.json")]
