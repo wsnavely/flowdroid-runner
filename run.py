@@ -21,11 +21,11 @@ reporoot = "/home/ubuntu/flowdroid-runner"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-j", "--jvmargs")
+    parser.add_argument("-m", "--mem")
     parser.add_argument("-o", "--s3out")
     args = parser.parse_args()
 
-    jvm_args = args.jvmargs
+    mem = args.mem
     s3_out = args.s3out
     
     logging.basicConfig(level="DEBUG")
@@ -43,7 +43,7 @@ if __name__ == "__main__":
         fd_out = os.path.join(flowdroid_dir, (apk_name + ".xml"))
 
         logging.info("Processing APK: " + apk_path)
-        args = jvm_args
+        args = ["-Xmx" + mem + "m"] 
         args += ["-jar", os.path.join(reporoot, "didfail_phase1.jar")]
         args += ["-apk", apk_path]
         args += ["-platforms", platforms]
