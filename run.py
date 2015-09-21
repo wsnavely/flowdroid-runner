@@ -43,7 +43,7 @@ if __name__ == "__main__":
         fd_out = os.path.join(flowdroid_dir, (apk_name + ".xml"))
 
         logging.info("Processing APK: " + apk_path)
-        args = ["-Xmx" + mem + "m"] 
+        args = ["-Xmx" + mem] 
         args += ["-jar", os.path.join(reporoot, "didfail_phase1.jar")]
         args += ["-apk", apk_path]
         args += ["-platforms", platforms]
